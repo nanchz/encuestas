@@ -1,6 +1,6 @@
 package com.springboot.satisfaccion.servicio.encuestas.modulodesempenoproceso.controller;
 
-import com.springboot.satisfaccion.servicio.encuestas.modulodesempenoproceso.entities.EncuestaModuloDesempenoProceso;
+import com.springboot.satisfaccion.servicio.encuestas.modulodesempenoproceso.model.entities.EncuestaModuloDesempenoProceso;
 import com.springboot.satisfaccion.servicio.encuestas.modulodesempenoproceso.service.EncuestaModuloDesempenoProcesoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -46,7 +46,7 @@ public class EncuestaModuloDesempenoProcesoController {
     @PostMapping(value = "/save")
     public String save(@Valid EncuestaModuloDesempenoProceso encuestaModuloDesempenoProceso, BindingResult result, Model model, RedirectAttributes flash) {
         if (result.hasErrors()) {
-            model.addAttribute("title", "Modulo encuesta expectativa");
+            model.addAttribute("title", "Modulo encuesta Desempeño Proceso");
             return "moduloDesempenoProcesoView";
         }
         String flashMessage = "La encuesta se ha guardado satisfactoriamente";

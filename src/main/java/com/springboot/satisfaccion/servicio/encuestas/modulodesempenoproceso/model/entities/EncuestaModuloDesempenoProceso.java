@@ -1,4 +1,4 @@
-package com.springboot.satisfaccion.servicio.encuestas.modulodesempenoproceso.entities;
+package com.springboot.satisfaccion.servicio.encuestas.modulodesempenoproceso.model.entities;
 
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
