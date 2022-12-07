@@ -22,7 +22,18 @@
           <li class="nav-item active"><a class="nav-link" th:href="@{/index}">Home</a></li>
             <span class="sr-only"></span>
           </a></li>
-          <li class="nav-item"><a class="nav-link" th:href="@{/toList}">Encuestas</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Encuestas
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" th:href="@{/api/satisfaccionservicio/encuestas/moduloexpectativa/index}">Expectativa</a></li>
+              <li><a class="dropdown-item" th:href="@{/api/satisfaccionservicio/encuestas/modulocanalesatencion/index}">Canales de Atención</a></li>
+              <li><a class="dropdown-item" th:href="@{/api/satisfaccionservicio/encuestas/modulotalentohumano/index}">Talento Humano</a></li>
+              <li><a class="dropdown-item" th:href="@{/api/satisfaccionservicio/encuestas/modulodesempenoproceso/index}">Desempeño Proceso</a></li>
+              <li><a class="dropdown-item" th:href="@{/api/satisfaccionservicio/encuestas/moduloresultado/index}">Percepcion Resultado</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a class="nav-link" th:href="@{/toList}">Administración</a></li>
         </ul>
       </div>
