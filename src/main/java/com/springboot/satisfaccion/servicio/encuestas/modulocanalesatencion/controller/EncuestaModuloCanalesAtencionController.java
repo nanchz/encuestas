@@ -41,8 +41,10 @@ public class EncuestaModuloCanalesAtencionController {
     }
 
     @PostMapping(value = "/save")
-    public String save(@Valid EncuestaModuloCanalesAtencion encuestaModuloCanalesAtencion, BindingResult result, Model model, RedirectAttributes flash) {
-        if (result.hasErrors()) {
+    public String save(@Valid EncuestaModuloCanalesAtencion encuestaModuloCanalesAtencion, BindingResult result, Model model, RedirectAttributes flash)
+    {
+        if (result.hasErrors())
+        {
             model.addAttribute("title", "Modulo encuesta canales atención");
             return "moduloCanalesAtencionView";
         }
@@ -55,7 +57,6 @@ public class EncuestaModuloCanalesAtencionController {
         flash.addFlashAttribute("success",flashMessage);
 
         return "redirect:/api/satisfaccionservicio/encuestas/modulocanalesatencion/index";
-
     }
 
     @GetMapping(value = "/all")

@@ -14,6 +14,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import javax.validation.Valid;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -54,6 +55,7 @@ public class EncuestaModuloDesempenoProcesoController {
         encuestaModuloDesempenoProceso.setPregunta1(pregunta1Valor);
         encuestaModuloDesempenoProceso.setPregunta2a(pregunta2AValor);
         encuestaModuloDesempenoProceso.setPregunta2b(pregunta2BValor);
+        encuestaModuloDesempenoProceso.setFechaDiligenciada(dateFormat.format(new Date()));
         encuestaModuloDesempenoProcesoService.save(encuestaModuloDesempenoProceso);
         flash.addFlashAttribute("success",flashMessage);
 
